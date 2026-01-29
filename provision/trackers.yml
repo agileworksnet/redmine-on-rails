@@ -1,0 +1,10 @@
+trackers:
+  - name: Bug
+    position: 1
+    is_in_roadmap: true
+  - name: Feature
+    position: 2
+    is_in_roadmap: true
+  - name: Support
+    position: 3
+    is_in_roadmap: false

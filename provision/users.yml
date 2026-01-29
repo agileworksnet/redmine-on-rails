@@ -1,0 +1,17 @@
+users:
+  - login: developer
+    password: password123
+    firstname: Developer
+    lastname: Account
+    mail: developer@example.com
+    admin: true
+    groups:
+      - Developers
+  - login: manager
+    password: password123
+    firstname: Project
+    lastname: Manager
+    mail: manager@example.com
+    admin: false
+    groups:
+      - Managers

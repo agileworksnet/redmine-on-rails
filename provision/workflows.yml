@@ -1,0 +1,28 @@
+workflows:
+  - role: Manager
+    tracker: Bug
+    transitions:
+      - from: New
+        to: [In Progress, Resolved, Feedback, Closed, Rejected]
+      - from: In Progress
+        to: [New, Resolved, Feedback, Closed]
+      - from: Resolved
+        to: [New, In Progress, Closed, Feedback]
+      - from: Feedback
+        to: [New, In Progress, Resolved, Closed]
+      - from: Closed
+        to: [New, In Progress]
+      - from: Rejected
+        to: [New]
+
+  - role: Developer
+    tracker: Bug
+    transitions:
+      - from: New
+        to: [In Progress, Resolved]
+      - from: In Progress
+        to: [Resolved, Feedback]
+      - from: Feedback
+        to: [In Progress, Resolved]
+      - from: Resolved
+        to: [In Progress]

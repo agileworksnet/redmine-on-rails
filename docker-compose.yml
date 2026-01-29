@@ -1,0 +1,45 @@
+networks:
+  redmine_net:
+    driver: bridge
+
+volumes:
+  redmine_files:
+  db_data:
+
+services:
+  redmine:
+    build: ./docker
+    ports:
+      - "8080:3000"
+    environment:
+      REDMINE_DB_MYSQL: db
+      REDMINE_DB_PASSWORD: redmine
+      REDMINE_DB_USERNAME: redmine
+      REDMINE_DB_DATABASE: redmine
+    volumes:
+      - redmine_files:/usr/src/redmine/files
+      - ./provision:/usr/src/redmine/provision
+    networks:
+      - redmine_net
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mariadb:10.11
+    environment:
+      MARIADB_ROOT_PASSWORD: redmine
+      MARIADB_DATABASE: redmine
+      MARIADB_USER: redmine
+      MARIADB_PASSWORD: redmine
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - redmine_net
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+

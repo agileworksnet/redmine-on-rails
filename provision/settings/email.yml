@@ -1,0 +1,11 @@
+settings:
+  # Hostname where Redmine is hosted
+  host_name: 'localhost:8080'
+  
+  # Protocol used (http or https)
+  protocol: 'http'
+  
+  # Email address for outgoing emails
+  mail_from: 'redmine@example.com'
+  
+

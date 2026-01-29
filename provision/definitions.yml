@@ -1,0 +1,127 @@
+roles:
+  - name: Manager
+    position: 1
+    permissions:
+      - :add_project
+      - :edit_project
+      - :select_project_modules
+      - :manage_members
+      - :manage_versions
+      - :add_subprojects
+      - :manage_categories
+      - :view_issues
+      - :add_issues
+      - :edit_issues
+      - :manage_issue_relations
+      - :manage_subtasks
+      - :set_issues_private
+      - :set_own_issues_private
+      - :add_issue_notes
+      - :edit_issue_notes
+      - :edit_own_issue_notes
+      - :view_private_notes
+      - :set_notes_private
+      - :delete_issues
+      - :view_issue_watchers
+      - :add_issue_watchers
+      - :delete_issue_watchers
+      - :manage_public_queries
+      - :save_queries
+      - :view_gantt
+      - :view_calendar
+      - :view_time_entries
+      - :log_time
+      - :edit_time_entries
+      - :edit_own_time_entries
+      - :manage_project_activities
+      - :log_time_for_other_users
+      - :view_documents
+      - :add_documents
+      - :edit_documents
+      - :delete_documents
+      - :view_files
+      - :manage_files
+      - :view_wiki_pages
+      - :view_wiki_edits
+      - :export_wiki_pages
+      - :view_wiki_page_watchers
+      - :add_wiki_page_watchers
+      - :delete_wiki_page_watchers
+      - :add_wiki_pages
+      - :edit_wiki_pages
+      - :delete_wiki_pages
+      - :rename_wiki_pages
+      - :protect_wiki_pages
+      - :manage_wiki
+      - :view_changesets
+      - :browse_repository
+      - :commit_access
+      - :manage_related_issues
+      - :manage_boards
+      - :add_messages
+      - :edit_messages
+      - :edit_own_messages
+      - :delete_messages
+      - :delete_own_messages
+      - :view_news
+      - :manage_news
+      - :comment_news
+
+  - name: Developer
+    position: 2
+    permissions:
+      - :view_issues
+      - :add_issues
+      - :edit_issues
+      - :add_issue_notes
+      - :save_queries
+      - :view_gantt
+      - :view_calendar
+      - :log_time
+      - :view_time_entries
+      - :comment_news
+      - :view_documents
+      - :view_wiki_pages
+      - :view_wiki_edits
+      - :add_wiki_pages
+      - :edit_wiki_pages
+      - :view_changesets
+      - :browse_repository
+      - :add_messages
+      - :edit_own_messages
+
+trackers:
+  - name: Bug
+    position: 1
+    is_in_roadmap: true
+  - name: Feature
+    position: 2
+    is_in_roadmap: true
+  - name: Support
+    position: 3
+    is_in_roadmap: false
+
+issue_statuses:
+  - name: New
+    is_closed: false
+    position: 1
+    default_done_ratio: 0
+  - name: In Progress
+    is_closed: false
+    position: 2
+    default_done_ratio: 50
+  - name: Resolved
+    is_closed: false
+    position: 3
+    default_done_ratio: 100
+  - name: Feedback
+    is_closed: false
+    position: 4
+  - name: Closed
+    is_closed: true
+    position: 5
+    default_done_ratio: 100
+  - name: Rejected
+    is_closed: true
+    position: 6
+    default_done_ratio: 0

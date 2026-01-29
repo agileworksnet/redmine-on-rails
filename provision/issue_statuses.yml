@@ -1,0 +1,24 @@
+issue_statuses:
+  - name: New
+    is_closed: false
+    position: 1
+    default_done_ratio: 0
+  - name: In Progress
+    is_closed: false
+    position: 2
+    default_done_ratio: 50
+  - name: Resolved
+    is_closed: false
+    position: 3
+    default_done_ratio: 100
+  - name: Feedback
+    is_closed: false
+    position: 4
+  - name: Closed
+    is_closed: true
+    position: 5
+    default_done_ratio: 100
+  - name: Rejected
+    is_closed: true
+    position: 6
+    default_done_ratio: 0

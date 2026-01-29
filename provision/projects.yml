@@ -1,0 +1,12 @@
+projects:
+  - name: "Internal Infrastructure"
+    identifier: "internal-infra"
+    description: "Project for managing internal servers and tools"
+    is_public: false
+    members:
+      # User login
+      - principal: "manager"
+        roles: ["Manager"]
+      # Group name
+      - principal: "Developers"
+        roles: ["Developer"]
